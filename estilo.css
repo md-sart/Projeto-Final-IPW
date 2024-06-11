@@ -17,18 +17,31 @@ header h1 {
   margin: 0;
 }
 
-nav {
-background-color: #2E4053;  
-overflow: hidden;
-text-align: center;
+.navBar ul{
+  list-style-type:none;
+  background-color: #2E4053;
+  padding:0px;
+  margin: 0px;
+  overflow: hidden;
+   text-align: center;
 }
 
-nav a {
-color: white;
-padding: 14px 16px;
-display: block; 
-text-decoration: none;
-display: inline-block;
+.navBar a{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.navBar a:hover{
+  background-color: black;
+  
+}
+
+.navBar li{
+  display: inline-block;
+  
 }
 
 .title{
