@@ -32,6 +32,11 @@ nav a {
   display: inline-block;
 }
 
+.title{
+  color: white;
+  text-align: center;
+}
+
 .quizzes-boxes {
     display: flex;
     flex-wrap: wrap;
