@@ -37,6 +37,11 @@ nav a {
   text-align: center;
 }
 
+.secao{
+  color:white;
+  text-align: left;
+}
+
 .quizzes-boxes {
     display: flex;
     flex-wrap: wrap;
