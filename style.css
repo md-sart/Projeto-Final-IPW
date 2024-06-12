@@ -1,41 +1,51 @@
-.body__index {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17202A;
+  color: white;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #17202A;
 }
 
-.header__index {
-  background-color: #17202A;
+.body__index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__index, .header_sobre {
+  background-color: #2E4053;
   color: white;
   padding: 10px 0;
   text-align: center;
-  width: 100%; 
-  position: fixed; 
-  top: 0; 
-  z-index: 1000; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
-.h1__header__index {
-  text-align: left;
+.h1__header__index, .title {
   font-size: 50px;
-  list-style-type: none;
-  background-color: #2E4053;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  text-align: center;
 }
 
 .navBar__ul__index {
   list-style-type: none;
-  background-color: #2E4053;
   padding: 0;
   margin: 0;
   overflow: hidden;
   text-align: center;
   font-size: 30px;
+  background-color: #2E4053;
+}
+
+.navBar_li__index {
+  display: inline-block;
 }
 
 .navBar__a__index {
@@ -50,19 +60,15 @@
   background-color: black;
 }
 
-.navBar_li__index {
-  display: inline-block;
+.main-content {
+  margin-top: 80px;
+  text-align: center;
 }
 
-
-.title__index{
-color: white;
-text-align: center;
-}
-
-.secao{
-color:white;
-text-align: left;
+.title__index {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .quizzes-boxes {
@@ -70,129 +76,75 @@ text-align: left;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  background-color: #17202A;
 }
 
-.quiz__img{
-background-color: white;
-color: black; 
-width: 550px;
-height: 550px;
-margin: 10px;
-text-align: center;
-border: 2px #17202A;
-border-radius: 6px;
-overflow: hidden;
-position: relative;
-object-fit: cover;
-transition: opacity 0.6s;
+.quiz__img {
+  background-color: white;
+  color: black;
+  width: 550px;
+  height: 550px;
+  margin: 10px;
+  text-align: center;
+  border: 2px solid #17202A;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.6s;
 }
 
-.quiz__img:hover{
-opacity:0.3;
+.quiz__img img {
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
 }
 
-.content{
-position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%, -50%);
-color:#17202A;
-font-size:24px;
-opacity: 0;
-transition: opacity 0.6s;
+.quiz__img:hover {
+  opacity: 0.8;
 }
 
-.quiz__h1:hover .content{
-opacity:1;
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #17202A;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.quiz__img:hover .content {
+  opacity: 1;
 }
 
 footer {
-background-color: #2E4053;
-clear: both;
-padding: 10px 0;
-color: white;
-text-align: center;
-}
-footer a{
-text-decoration: none;
-color: white;
-}
-
-*{
-  padding: 0;
-  margin:0;
-  box-sizing: border-box;
-}
-
-button{
-  cursor: pointer;
-  
-}
-body{
-  background-color: black ;
+  background-color: #2E4053;
+  clear: both;
+  padding: 10px 0;
   color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.container{
-  background-color: black;
-  width: 90%;
-  max-width: 800px;
-  
-  border: 2px solid white;
-  border-radius: 6px;
-  padding: 16px;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-}
-
-.question-box{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-.question{
-  font-size: 24px;
-  font-weight: bold;
   text-align: center;
-}
-
-.answers-box{
+  position: fixed;
   width: 100%;
-  display: grid;
-  grid-template-columns:1fr 1fr ;
-  gap: 16px;
+  bottom: 0;
 }
 
-.next-question{
-  margin-top: 32px;
-}
-
-.button{
-  background-color: blue;
+footer a {
+  text-decoration: none;
   color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: 0;
-  border-radius: 6px;
-  height: 48px;
-  padding: 0 32px;
 }
 
-.hide{
-  display: none;
+.container {
+  margin-top: 80px;
+  padding: 20px;
 }
 
+.h2__sobre, .p__sobre {
+  margin-bottom: 20px;
+}
 
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
