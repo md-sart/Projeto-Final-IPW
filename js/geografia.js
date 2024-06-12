@@ -1,53 +1,53 @@
 const questions = [
     {
-        question: "Qual é a capital do Canadá?",
-        options: ["Toronto", "Vancouver", "Ottawa", "Montreal"],
-        answer: 2
+        question: "Qual é o maior deserto do mundo?",
+        options: ["Deserto do Saara", "Deserto da Arábia", "Deserto de Gobi", "Antártida"],
+        answer: 0
     },
     {
-        question: "Qual rio é o mais longo do mundo?",
+        question: "Qual é o rio mais longo do mundo?",
         options: ["Rio Amazonas", "Rio Nilo", "Rio Yangtzé", "Rio Mississippi"],
         answer: 1
     },
     {
-        question: "Qual país tem a maior população do mundo?",
-        options: ["Índia", "Estados Unidos", "Indonésia", "China"],
-        answer: 3
+        question: "Em qual continente está localizado o Egito?",
+        options: ["Ásia", "África", "Europa", "América do Sul"],
+        answer: 1
     },
     {
-        question: "Qual é o maior deserto do mundo?",
-        options: ["Deserto do Saara", "Deserto da Arábia", "Deserto de Gobi", "Antártida"],
-        answer: 3
-    },
-    {
-        question: "Em qual continente está localizada a Argentina?",
-        options: ["África", "Europa", "América do Sul", "América do Norte"],
+        question: "Qual é a capital da Austrália?",
+        options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
         answer: 2
     },
     {
-        question: "Qual é a maior cadeia de montanhas do mundo?",
-        options: ["Himalaia", "Andes", "Rocky Mountains", "Alpes"],
+        question: "Qual é o país com maior área territorial do mundo?",
+        options: ["Rússia", "Canadá", "Estados Unidos", "China"],
         answer: 0
     },
     {
-        question: "Qual é o menor país do mundo em área?",
-        options: ["Mônaco", "Vaticano", "San Marino", "Liechtenstein"],
+        question: "Qual é o menor país do mundo em área territorial?",
+        options: ["Mônaco", "Vaticano", "San Marino", "Nauru"],
         answer: 1
     },
     {
-        question: "Qual é o oceano mais profundo do mundo?",
-        options: ["Oceano Atlântico", "Oceano Índico", "Oceano Pacífico", "Oceano Ártico"],
-        answer: 2
+        question: "Qual é a montanha mais alta do mundo?",
+        options: ["Monte Everest", "Monte Kilimanjaro", "Monte McKinley", "Monte Aconcágua"],
+        answer: 0
     },
     {
-        question: "Qual é a capital do Japão?",
-        options: ["Osaka", "Tóquio", "Kyoto", "Nagoya"],
-        answer: 1
+        question: "Qual é o maior arquipélago do mundo?",
+        options: ["Indonésia", "Filipinas", "Havaí", "Japão"],
+        answer: 0
     },
     {
-        question: "Em qual país fica a Grande Barreira de Coral?",
-        options: ["Brasil", "Austrália", "México", "Indonésia"],
-        answer: 1
+        question: "Qual é o ponto mais profundo dos oceanos?",
+        options: ["Fossa das Marianas", "Fossa de Porto Rico", "Fossa do Japão", "Fossa da Groenlândia"],
+        answer: 0
+    },
+    {
+        question: "Qual é o maior país da América do Sul em área territorial?",
+        options: ["Brasil", "Argentina", "Colômbia", "Peru"],
+        answer: 0
     },
 ];
 
@@ -70,9 +70,9 @@ function showQuestion() {
         input.type = 'radio';
         input.name = 'option';
         input.value = index;
-        input.id = option${index};
+        input.id = `option${index}`;
         const label = document.createElement('label');
-        label.htmlFor = option${index};
+        label.htmlFor = `option${index}`;
         label.textContent = option;
         li.appendChild(input);
         li.appendChild(label);
@@ -106,8 +106,11 @@ function nextQuestion() {
 function showResult() {
     questionElement.textContent = '';
     optionsElement.innerHTML = '';
-    resultElement.textContent = Você acertou ${score} de ${questions.length} perguntas.;
+    resultElement.textContent = `Você acertou ${score} de ${questions.length} perguntas.`;
     resultElement.style.display = 'block';
 }
 
 showQuestion();
+
+submitButton.addEventListener('click', checkAnswer);
+nextButton.addEventListener('click', nextQuestion);

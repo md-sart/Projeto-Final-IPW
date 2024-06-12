@@ -1,58 +1,55 @@
 const questions = [
     {
+        question: "Quem foi o primeiro presidente dos Estados Unidos?",
+        options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"],
+        answer: 1
+    },
+    {
+        question: "Em que ano começou a Segunda Guerra Mundial?",
+        options: ["1914", "1939", "1945", "1950"],
+        answer: 1
+    },
+    {
+        question: "Quem era o imperador da França durante as Guerras Napoleônicas?",
+        options: ["Luís XVI", "Carlos Magno", "Napoleão Bonaparte", "Luís XIV"],
+        answer: 2
+    },
+    {
+        question: "Quem foi o responsável pela descoberta do Brasil?",
+        options: ["Cristóvão Colombo", "Vasco da Gama", "Pedro Álvares Cabral", "Fernando de Magalhães"],
+        answer: 2
+    },
+    {
+        question: "Quem foi o principal autor da Declaração de Independência dos Estados Unidos?",
+        options: ["George Washington", "Benjamin Franklin", "Thomas Jefferson", "John Adams"],
+        answer: 2
+    },
+    {
         question: "Em que ano ocorreu a Revolução Francesa?",
-        options: ["1776", "1789", "1812", "1804"],
-        answer: 1
-    },
-    {
-        question: "Quem foi o líder da Revolução Russa em 1917?",
-        options: ["Vladimir Lenin", "Josef Stalin", "Leon Trotsky", "Mikhail Gorbachev"],
+        options: ["1789", "1776", "1804", "1812"],
         answer: 0
     },
     {
-        question: "Qual é o nome do imperador romano que supostamente incendiou Roma?",
-        options: ["Nero", "Augusto", "Júlio César", "Trajano"],
-        answer: 0
-    },
-    {
-        question: "Quem foi o primeiro presidente do Brasil?",
-        options: ["Getúlio Vargas", "Juscelino Kubitschek", "Tiradentes", "Marechal Deodoro da Fonseca"],
-        answer: 3
-    },
-    {
-        question: "Qual foi a capital do Império Romano?",
-        options: ["Atenas", "Roma", "Constantinopla", "Alexandria"],
-        answer: 1
-    },
-    {
-        question: "Quem foi o líder nazista durante a Segunda Guerra Mundial?",
-        options: ["Joseph Goebbels", "Heinrich Himmler", "Hermann Göring", "Adolf Hitler"],
-        answer: 3
-    },
-    {
-        question: "Qual foi a primeira guerra mundial?",
-        options: ["Guerra Civil Americana", "Guerra Fria", "Primeira Guerra Mundial", "Guerra Franco-Prussiana"],
+        question: "Qual civilização construiu as pirâmides de Gizé?",
+        options: ["Maias", "Astecas", "Egípcios", "Incas"],
         answer: 2
     },
     {
-        question: "Quem foi o líder da Revolução Cubana em 1959?",
-        options: ["Fulgencio Batista", "Fidel Castro", "Che Guevara", "Camilo Cienfuegos"],
+        question: "Quem era o líder da União Soviética durante a Segunda Guerra Mundial?",
+        options: ["Lenin", "Trotsky", "Stalin", "Gorbachev"],
+        answer: 2
+    },
+    {
+        question: "Em que ano ocorreu a queda do Muro de Berlim?",
+        options: ["1985", "1989", "1991", "1993"],
         answer: 1
     },
     {
-        question: "Qual foi o período conhecido como 'Idade das Trevas'?",
-        options: ["Idade Média", "Renascimento", "Idade Antiga", "Idade Moderna"],
-        answer: 0
+        question: "Quem foi o primeiro homem a viajar ao espaço?",
+        options: ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
+        answer: 1
     },
-    {
-        question: "Qual foi o primeiro país a abolir a escravidão?",
-        options: ["Brasil", "Estados Unidos", "Haiti", "Reino Unido"],
-        answer: 2
-    }
 ];
-
-// Restante do seu código JavaScript...
-
 
 let currentQuestion = 0;
 let score = 0;
@@ -73,9 +70,9 @@ function showQuestion() {
         input.type = 'radio';
         input.name = 'option';
         input.value = index;
-        input.id = option${index};
+        input.id = `option${index}`;
         const label = document.createElement('label');
-        label.htmlFor = option${index};
+        label.htmlFor = `option${index}`;
         label.textContent = option;
         li.appendChild(input);
         li.appendChild(label);
@@ -109,8 +106,11 @@ function nextQuestion() {
 function showResult() {
     questionElement.textContent = '';
     optionsElement.innerHTML = '';
-    resultElement.textContent = Você acertou ${score} de ${questions.length} perguntas.;
+    resultElement.textContent = `Você acertou ${score} de ${questions.length} perguntas.`;
     resultElement.style.display = 'block';
 }
 
 showQuestion();
+
+submitButton.addEventListener('click', checkAnswer);
+nextButton.addEventListener('click', nextQuestion);
