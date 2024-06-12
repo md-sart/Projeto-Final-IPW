@@ -70,9 +70,9 @@ function showQuestion() {
         input.type = 'radio';
         input.name = 'option';
         input.value = index;
-        input.id = option${index};
+        input.id = `option${index}`;
         const label = document.createElement('label');
-        label.htmlFor = option${index};
+        label.htmlFor = `option${index}`;
         label.textContent = option;
         li.appendChild(input);
         li.appendChild(label);
@@ -106,7 +106,7 @@ function nextQuestion() {
 function showResult() {
     questionElement.textContent = '';
     optionsElement.innerHTML = '';
-    resultElement.textContent = Você acertou ${score} de ${questions.length} perguntas.;
+    resultElement.textContent = `Você acertou ${score} de ${questions.length} perguntas.`;
     resultElement.style.display = 'block';
 }
 

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conhecimentos Gerais</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/quiz.css">
 </head>
-<header class="">
-    <h1 class="title"><a href="index.html">Quizz</a></h1>
-    <nav>
-        <ul>
-            <li><a href="index.html" onclick="showPage('home')">Início</a></li>
-            <li><a href="/html/sobre.html" onclick="showPage('about')">Sobre</a></li>
+<header class="header__index">
+    <h1 class="h1__header__index">Quizz</h1>
+    <nav class="secao">
+        <ul class="navBar__ul__index">
+            <li class="navBar_li__index"><a href="/index.html" class="navBar__a__index">Início</a></li>
+            <li class="navBar_li__index"><a href="/html/Sobre.html" class="navBar__a__index">Sobre nós</a></li>
         </ul>
     </nav>
 </header>
@@ -19,8 +19,8 @@
     <div class="quiz-container">
         <div class="question"></div>
         <ul class="options"></ul>
-        <button class="submit-btn" onclick="checkAnswer()">Enviar</button>
-        <button class="next-btn" onclick="nextQuestion()" style="display: none;">Próxima</button>
+        <button class="submit-btn">Enviar</button>
+        <button class="next-btn" style="display: none;">Próxima</button>
         <div class="result" style="display: none;"></div>
     </div>
 
