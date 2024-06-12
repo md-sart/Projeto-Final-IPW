@@ -150,7 +150,8 @@ footer a {
 
 .container {
   margin-top: 80px;
-  padding: 20px;
+  width: 50%;
+  padding: 100px;
 }
 
 .h2__sobre, .p__sobre {
