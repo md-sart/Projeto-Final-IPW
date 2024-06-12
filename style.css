@@ -150,17 +150,14 @@ footer a {
 
 .container {
   margin-top: 80px;
-  width: 50%;
+  margin-left: 600px;
+  margin-bottom: 10px;
   padding: 100px;
+  justify-content: center;
+  text-align: center;
 }
 
 .h2__sobre, .p__sobre {
+  width: 50%;
   margin-bottom: 20px;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
